@@ -1,0 +1,120 @@
+/* Skills.css */
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 1440px;
+    color: #00ffd5;
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: "Kode Mono";
+    font-weight: 400;
+}
+
+.skill-heading {
+    font-family: "Kode Mono";
+    font-size: 3.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00ffd5;
+}
+
+.skills-container {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 1200px;
+    color: #00ffd5;
+    font-size: 1.4rem;
+    line-height: 1.6;   
+    font-family: "Kode Mono";
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid #00ffd5;
+    border-radius: 10px;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    width: fit-content; /* Adjust based on content width */
+    animation: scroll 40s linear infinite,  loop infinite;
+}
+.container:hover {
+    animation-play-state: paused;
+}
+@keyframes loop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+.skill {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    background-color: #2119519e;
+    color: #00ffd5;
+    /* font-size: 18px; */
+    line-height: 1.6;
+    font-family: "Kode Mono";
+    font-weight: 400;
+    border: 1px solid #00ffd5;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 20px 10px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+.skill h3 {
+    width: 250px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00ffd5;
+}
+
+
+.skillIcon {
+    width: 100px;
+    height: 100px;
+}
+.skill:hover > .skillIcon {
+    animation-play-state: paused;
+    animation: none;
+    filter: drop-shadow(-10px 0 150px #00ffd5);
+    color: #0c0c0c;
+  }
+  

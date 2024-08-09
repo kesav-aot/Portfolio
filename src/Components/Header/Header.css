@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+margin: 0;
+padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.typing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width:900px;
+    width: 100%;
+    font-family: "Press Start 2P";
+    text-align: left;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+}
+
+.typing h1,
+.typing h2 {
+    color: #32E0C4;
+    font-size: 40px;
+    font-weight: 200;
+    text-align: center;
+    filter: drop-shadow(0 0 100px #00ffd5);
+}
+
+
+
+.typing .tool {
+    color: #EEEEEE;
+    font-size: 30px;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    font-family: "Press Start 2P";
+}
+
+
+
+.header-img {
+    max-width: 50%;
+}
+
