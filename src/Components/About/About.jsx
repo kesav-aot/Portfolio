@@ -21,8 +21,8 @@ function About() {
 
   return (
     <section className="about" data-aos="fade-up">
-      <h1 className="about-heading" data-aos="fade-right">About Me</h1>
-      <div className="aboutText">
+      <h1 className="about-heading" data-aos="flip-down">About Me</h1>
+      <div className="aboutText" data-aos="fade-right">
         <div className="para" data-aos="fade-left">
           <p className="about-text">
             Hello! I'm Kesav Gopan, a Junior Software Engineer at AOT Technologies with a passion for bridging technology and creativity. From my base in Trivandrum, Kerala, I specialize in web development while also nurturing skills in multimedia editing and various programming languages.
@@ -34,7 +34,7 @@ function About() {
             Whether I'm coding a new feature, editing media, or designing user interfaces, I bring a blend of technical skill and creative vision. I thrive on challenges and am always excited to explore new technologies and methodologies in this ever-evolving field.
           </p>
         </div>
-        <div className="image-container" data-aos="fade-up">
+        <div className="image-container" data-aos="fade-right">
           <img className="image" src="kesavGopan.png" alt="Kesav Gopan" />
         </div>
       </div>

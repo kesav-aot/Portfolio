@@ -1,3 +1,8 @@
+a{
+    text-decoration: none;
+    color: #32E0C4;
+}
+
 .sidebar{
     position: fixed;
     top: 0;
@@ -136,8 +141,8 @@ li:active{
 
 
 .menuBtn, .closeBtn {
-  background: none;
-  border: none;
+    background-color: transparent;
+    border: none;
   color:#32E0C4;
   font-size: 24px;
   cursor: pointer;
@@ -149,6 +154,15 @@ li:active{
   left: 0px;
   top: 6px;
   margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: #21212134;
+  
 }
 
 .menuHead {
@@ -173,4 +187,35 @@ span {
   }
   
 
- 
+ /* App.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Sidebar.css */
+
+/* Sidebar Button */
+.menuBtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Hide Sidebar Button */

@@ -1,11 +1,11 @@
-// Sidebar.js
 import React from 'react';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faDeleteLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-function Sidebar({ showSidebar, setShowSidebar }) {
+function Sidebar({ showSidebar, setShowSidebar, scrollToSection }) {
+  
   return (
     <>
       <button 
@@ -13,7 +13,7 @@ function Sidebar({ showSidebar, setShowSidebar }) {
         onClick={() => setShowSidebar(true)} 
         aria-label="Open sidebar"
       >
-        <FontAwesomeIcon icon={faBars} size='lg'  color='#32E0C4' />
+        <FontAwesomeIcon icon={faBars} size='lg' color='#32E0C4' />
         <span>Portfolio</span>
       </button>
       
@@ -21,21 +21,21 @@ function Sidebar({ showSidebar, setShowSidebar }) {
         <div className="menuHead">
           <h1>Menu</h1>
           <button className="closeBtn" onClick={() => setShowSidebar(false)} aria-label="Close sidebar">
-            <FontAwesomeIcon icon={faDeleteLeft}  color='#32E0C4' />
+            <FontAwesomeIcon icon={faDeleteLeft} color='#32E0C4' />
           </button>
         </div>
         <ul>
-          <li>Home <FontAwesomeIcon icon={faArrowRight } className='arrow' /></li>
-          <li>About <FontAwesomeIcon icon={faArrowRight }  className='arrow'/></li>
-          <li>Skills <FontAwesomeIcon icon={faArrowRight} className='arrow' /></li>
-          <li>Projects <FontAwesomeIcon icon={faArrowRight} className='arrow' /></li>
-          <li>Contact <FontAwesomeIcon icon={faArrowRight} className='arrow' /></li>
+          <li onClick={() => scrollToSection('home')}>Home <FontAwesomeIcon icon={faArrowRight} className='arrow' /></li>
+          <li onClick={() => scrollToSection('about')}>About <FontAwesomeIcon icon={faArrowRight} className='arrow' /></li>
+          <li onClick={() => scrollToSection('skills')}>Skills <FontAwesomeIcon icon={faArrowRight} className='arrow' /></li>
+          <li onClick={() => scrollToSection('projects')}>Projects <FontAwesomeIcon icon={faArrowRight} className='arrow' /></li>
+          <li onClick={() => scrollToSection('contact')}>Contact <FontAwesomeIcon icon={faArrowRight} className='arrow' /></li>
         </ul>
         <div className="socialIcons">
-          <FontAwesomeIcon icon={faFacebook} className="icon1" />
-          <FontAwesomeIcon icon={faInstagram} className="icon2" />
-          <FontAwesomeIcon icon={faLinkedin} className="icon3" />
-          <FontAwesomeIcon icon={faGithub} className="icon4" />
+          <a href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook} className="icon1"/></a>
+          <a href="https://www.instagram.com/"><FontAwesomeIcon icon={faInstagram} className="icon2"/></a>
+          <a href="https://www.linkedin.com/in/kesav-gopan-680129236/"><FontAwesomeIcon icon={faLinkedin} className="icon3"/></a>
+          <a href="https://github.com/kesav-aot"><FontAwesomeIcon icon={faGithub} className="icon4"/></a>
         </div>
       </aside>
     </>

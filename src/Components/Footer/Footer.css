@@ -1,0 +1,24 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    color: #32E0C4;
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Courier New', monospace;
+    font-weight: 400;
+    user-select: none;
+    margin-bottom: 50px;
+    background-color: #181818;
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+}

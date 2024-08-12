@@ -12,9 +12,11 @@ padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
+    gap: 20px;
 }
 
 .typing {
@@ -28,6 +30,7 @@ padding: 0;
     text-align: left;
     letter-spacing: 0.5px;
     word-spacing: 0.5px;
+    gap: 20px;
 }
 
 .typing h1,
@@ -56,3 +59,307 @@ padding: 0;
     max-width: 50%;
 }
 
+
+.header-img-overlay,
+.header-img-overlay2,
+.header-img-overlay3,
+.header-img-overlay4 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: none;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+}
+
+.header-img:hover > .header-img-overlay,
+.header-img:hover > .header-img-overlay2,
+.header-img:hover > .header-img-overlay3,
+.header-img:hover > .header-img-overlay4 {
+    display: block;
+}
+
+.header-img-overlay::before,
+.header-img-overlay::after,
+.header-img-overlay2::before,
+.header-img-overlay2::after,
+.header-img-overlay3::before,
+.header-img-overlay3::after,
+.header-img-overlay4::before,
+.header-img-overlay4::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color:gold;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+/* Overlay 1 */
+.header-img-overlay::before {
+    top: 20%;
+    left: 20%;
+    animation: particle1 3s infinite ease-in-out;
+}
+
+.header-img-overlay::after {
+    bottom: 20%;
+    right: 20%;
+    animation: particle2 3s infinite ease-in-out,particle1 3s infinite ease-in-out;
+}
+
+/* Overlay 2 */
+.header-img-overlay2::before {
+    top: 40%;
+    left: 30%;
+    animation: particle1 3s infinite ease-in-out,particle3 3s infinite ease-in-out;
+}
+
+.header-img-overlay2::after {
+    bottom: 27%;
+    right: 24%;
+    animation: particle2 3s infinite ease-in-out,particle3 3s infinite ease-in-out;
+}
+
+/* Overlay 3 */
+.header-img-overlay3::before {
+    top: 50%;
+    left: 40%;
+    animation: particle3 3s infinite ease-in-out;
+}
+
+.header-img-overlay3::after {
+    bottom: 30%;
+    right: 15%;
+    animation: particle4 3s infinite ease-in-out,particle5 3s infinite ease-in-out;
+
+}
+
+/* Overlay 4 */
+.header-img-overlay4::before {
+    top: 10%;
+    left: 50%;
+    animation: particle3 3s infinite ease-in-out,particle6 3s infinite ease-in-out;
+}
+
+.header-img-overlay4::after {
+    bottom: 60%;
+    right: 10%;
+    animation: particle4 3s infinite ease-in-out,particle5 3s infinite ease-in-out;
+}
+
+@keyframes particle1 {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(300%, 300%);
+        opacity: 1;
+    }
+}
+
+@keyframes particle2 {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-300%, -300%);
+        opacity: 1;
+    }
+}
+
+@keyframes particle3 {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(200%, 200%);
+        opacity: 1;
+    }
+}
+
+@keyframes particle4 {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-200%, -200%);
+        opacity: 1;
+    }
+}
+@keyframes particle5 {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(90%, 60%);
+        opacity: 1; 
+    }
+}
+@keyframes particle6 {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-90%, -60%);
+        opacity: 1; 
+    }
+}
+:root {
+    --particle-size: 5px;
+    --particle-color: rgba(255, 255, 255, 0.8);
+    --animation-duration: 3s;
+}
+
+.particle {
+    position: absolute;
+    width: var(--particle-size);
+    height: var(--particle-size);
+    background-color: var(--particle-color);
+    border-radius: 50%;
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes particle-move-1 {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-200%, -200%);
+        opacity: 1;
+    }
+}
+
+@keyframes particle-move-2 {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(200%, -200%);
+        opacity: 1;
+    }
+}
+
+@keyframes particle-move-3 {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-200%, 200%);
+        opacity: 1;
+    }
+}
+
+@keyframes particle-move-4 {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(200%, 200%);
+        opacity: 1;
+    }
+}
+
+.particle-1 {
+    animation: particle-move-1 var(--animation-duration) infinite;
+}
+
+.particle-2 {
+    animation: particle-move-2 var(--animation-duration) infinite;
+}
+
+.particle-3 {
+    animation: particle-move-3 var(--animation-duration) infinite;
+}
+
+.particle-4 {
+    animation: particle-move-4 var(--animation-duration) infinite;
+}
+@media screen and (max-width: 992px) {
+    .header {
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .typing h1,
+    .typing h2 {
+        font-size: 2rem;
+    }
+    
+    .typing .tool {
+        font-size: 1.5rem;
+    }
+}
+
+/* Medium devices (tablets) */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 50px;
+    }
+    
+    .header-text {
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+        font-size: 1.25rem;
+    }
+    
+    h2.tool {
+        width: 80%;
+        max-width: 300px;
+        font-size: 1rem;
+        height: auto;
+    }
+    
+    .header-img,
+    .header-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+}
+
+/* Small devices (phones) */
+@media screen and (max-width: 576px) {
+    .header {
+        padding: 10px;
+        gap: 5px;
+    }
+    
+    .typing h1,
+    .typing h2 {
+        font-size: 1.5rem;
+    }
+    
+    .typing .tool {
+        font-size: 1rem;
+    }
+    
+    .header-text {
+        width: 90%;
+        font-size: 1rem;
+    }
+    
+    h2.tool {
+        width: 90%;
+        font-size: 0.875rem;
+    }
+}

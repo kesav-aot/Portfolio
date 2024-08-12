@@ -85,12 +85,17 @@ function Header() {
     <div className="header">
       <div className="typing" data-aos="fade-up">
         <h1 data-aos="fade-down" data-aos-delay="200">Kesav Gopan</h1>
-        <h2 data-aos="fade-up" data-aos-delay="400">
+        <h2 data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
           I am a <span ref={toolRef} className="tool"></span>
         </h2>
       </div>
       <div className="header-img" data-aos="fade-left">
-        <img src="/PortfolioPic.png" alt="kesav-gopan" />
+        <img src="/PortfolioPic.png" alt="kesav-gopan" data-aos="fade-right" className='header-image' />
+        <div className="header-img-overlay"></div>
+        <div className="header-img-overlay2"></div>
+        <div className="header-img-overlay3"></div>
+        <div className="header-img-overlay4"></div>
+
       </div>
     </div>
   );

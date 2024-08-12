@@ -12,6 +12,7 @@
     font-family: 'Courier New', monospace;
     font-weight: 400;
     user-select: none;
+    gap: 20px;
 }
 
 .about h1 {
@@ -49,22 +50,30 @@
     line-height: 1.6;
     font-family: "Josefin Sans";
     font-weight: 400;
+    gap:20px;
+    background-color: #21195183;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    border: 1px solid #00ffd5;
+    border-radius: 10px;
 }
 
 .para {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap : 20px;
     width: 100%;
     margin: 0 auto;
-    padding: 15px;
     max-width: 1200px;
     color: #00ffd5;
     font-size: 18px;
     line-height: 1.6;
     font-family: "Josefin Sans";
     font-weight: 400;
+    padding: 20px;
+    text-align: justify;
 }
 
 .image {
@@ -82,4 +91,13 @@
 .image:hover {
     transform: scale(1.01);
     filter: drop-shadow(0 0 6px #00ffd5);
+}
+@media screen and (max-width: 768px) {
+    .aboutText {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    
 }
